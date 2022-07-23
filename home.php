@@ -17,21 +17,11 @@
 </head>
 <body>
   
-    <form name="f1" action="authentication.php" action="POST">
+    <form name="f1" action="authentication.php">
         <div class="container p-3 my-3 bg-primary text-white" style="text-align: center; border-radius: 25px;">
             <h1><b></b> Employee management System</b></h1>
-            <h2> Login </h2>
-            <div class="input-group" style="width: 50%; align-items: center; align-content: center; margin: auto;">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="user" type="text" class="form-control" name="user" id="user" placeholder="Email" required>
-            </div>
-            <br>
-            <div class="input-group" style="width: 50%; align-items: center; align-content: center; margin: auto;">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="pass" type="password" class="form-control" name="pass" id="pass" placeholder="Password" required>
-            </div>
-            <br>
-            <input type =  "submit" class=".btn btn-dark btn-lg" value="login">  
+            <h2> Employees table </h2>
+            <input type =  "submit" class=".btn btn-dark btn-lg" value="Logout">  
             <br>
             <br>
             <a href="admin.html" class=".btn btn-dark btn-lg" role="button">Admin</a>

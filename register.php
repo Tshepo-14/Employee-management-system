@@ -13,4 +13,6 @@ $password=$user->$password=$_POST['pass'];
 
 $user->setDetails($emp_nun, $surname, $name, $email, $password, $gender);
 
+
+
 ?>

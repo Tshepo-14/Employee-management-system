@@ -6,6 +6,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 
 	header ("Location: index.html");
 }
+?>
 
 <!--Login Page for employees-->
 <!DOCTYPE html>

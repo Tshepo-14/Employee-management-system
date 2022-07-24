@@ -1,4 +1,9 @@
 <!--Admin home page-->
+<?php
+   ob_start();
+   session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +36,7 @@
                 <input id="pass" type="password" class="form-control" name="pass" placeholder="Password" required>
             </div>
             <br>
-            <input type =  "submit" class=".btn btn-dark btn-lg" value="Login">  
+            <input type =  "submit" class=".btn btn-dark btn-lg" value="login">  
             <br>
             <br>
             <a href="index.html" class=".btn btn-dark btn-lg" role="button">Employee</a>

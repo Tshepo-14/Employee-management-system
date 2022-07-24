@@ -1,3 +1,4 @@
+<!--Php page that checks correct login details of admin-->
 <?php
 require_once "connection.php";
 
@@ -34,8 +35,8 @@ require_once "connection.php";
 
         $seconds = 5 + time();
        
-    
 
+        
         if($count == 1) {  
             //echo "<h1> Successful </h1>";
             session_start();
@@ -46,10 +47,12 @@ require_once "connection.php";
            //insert javascript code stating wrong information
            echo "<script>  
            alert('Please enter correct login details');
-           location.href = 'index.html';
+           location.href = 'admin.html';
            </script>"; 
            session_start();
 		   $_SESSION['login'] = '';
-        }     
+           //header("location: admin.html");
+        }  
+        
 
 ?>

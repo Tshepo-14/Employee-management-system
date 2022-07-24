@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once "connection.php";
+
+if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+	header ("Location: index.html");
+}
+
 <!--Login Page for employees-->
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +30,8 @@
         <div class="container p-3 my-3 bg-primary text-white" style="text-align: center; border-radius: 25px;">
             <h1><b></b> Employee management System</b></h1>
             <h2> Employees table </h2>
-            <input type =  "submit" class=".btn btn-dark btn-lg" value="Logout">  
+            <input type =  "submit"  a href="logout.php" class=".btn btn-dark btn-lg" value="Logout">  
             <br>
-            <br>
-            <a href="admin.html" class=".btn btn-dark btn-lg" role="button">Admin</a>
             <br>
             <br>
         </div>

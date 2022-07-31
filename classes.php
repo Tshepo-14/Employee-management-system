@@ -5,16 +5,22 @@ class User{
     public $email;
     public $surname;
     public $password;
-    public $sex;
+    public $adress;
+    public $department;
+    public $job;
+  
     
-    function setDetails($emp_num, $surname ,$username, $email ,$password, $sex)
+    function setDetails($emp_num, $surname ,$username, $email ,$password, $adress, $department, $job)
     {
         $this->emp_num=$emp_num;
         $this->username=$username;
         $this->surname=$surname;
         $this->email=$email;
         $this->password=$password;
-        $this->sex=$sex;
+        $this->adress=$adress;
+        $this->department=$department;
+        $this->job=$job;
+        
         
     }
     //empNum
@@ -33,22 +39,32 @@ class User{
         return $this->surname;
     }
     //password
-    function returNpassWord()
+    function returnPassWord()
     {
         return $this->password;
     }
     //gender
-    function returnSex()
+    function returnAdress()
     {
-        return $this->sex;
+        return $this->adress;
 
     }
     //username
     function returnemail()
     {
         return $this->email;
-
     }
+    //job
+    function returnJob()
+    {
+        return $this->job;
+    }
+    //department
+    function returndepartment()
+    {
+        return $this->department;
+    }
+    
 }
 
 Class Job{

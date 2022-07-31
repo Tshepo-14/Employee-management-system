@@ -8,6 +8,8 @@ class User{
     public $adress;
     public $department;
     public $job;
+    public $timestampArrive;
+    public $timestampLeave;
   
     
     function setDetails($emp_num, $surname ,$username, $email ,$password, $adress, $department, $job)
@@ -22,6 +24,14 @@ class User{
         $this->job=$job;
         
         
+    }
+    public setTimeArrive($timestampArrive)
+    {
+        $this->timestampArrive=$timestampArrive;
+    }
+    public setTimeLeave($timestampLeave)
+    {
+        $this->timestampLeave=$timestampLeave;
     }
     //empNum
     function returnEmpNum()
@@ -63,6 +73,16 @@ class User{
     function returndepartment()
     {
         return $this->department;
+    }
+    //returnTimeArrive
+    function returnTimeArrive()
+    {
+        return $this->timestampArrive;
+    }
+    //returnTimeLeft
+    function returnTimeLeave()
+    {
+        return $this->timestampLeave;
     }
     
 }

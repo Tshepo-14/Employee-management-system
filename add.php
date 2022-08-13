@@ -1,7 +1,9 @@
 <?php
 require_once "connection.php";
+require_once "classes.php";
 
-    $comp=$comp+1;
+   
+
     
     $surname=$_POST['surname'];
     $username=$_POST['name'];
@@ -11,19 +13,23 @@ require_once "connection.php";
     $department=$_POST['department'];
     $job=$_POST['job'];
 
-    setDetails($emp_num, $surname ,$username, $email ,$password, $adress, $department, $job)
+    $user = new User();
+   
+
+    $user->setDetails($surname ,$username, $email ,$password, $adress, $department, $job);
     
 
-    $cityz=$_POST['city'];
-    $details=$_POST['dff'];
+    
 
 
 
-    $sql = "INSERT INTO employees (serviceID, updates) VALUES ('$cityz', '$details')";
+    $sql = "INSERT INTO employees ( name, surname, email, adress, password ,department,job) VALUES ('$username', '$surname', '$email', '$adress','$password','$department','$job')";
 
     if (mysqli_query($con, $sql)) {
-        header("location: main.php");
+        header("location: home.php");
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($con);
       }
+
+
 ?>

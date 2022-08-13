@@ -1,6 +1,6 @@
 <?php
 class User{
-    public $emp_num;
+   
     public $username;
     public $email;
     public $surname;
@@ -12,9 +12,9 @@ class User{
     public $timestampLeave;
   
     
-    function setDetails($emp_num, $surname ,$username, $email ,$password, $adress, $department, $job)
+    function setDetails( $surname ,$username, $email ,$password, $adress, $department, $job)
     {
-        $this->emp_num=$emp_num;
+       
         $this->username=$username;
         $this->surname=$surname;
         $this->email=$email;
@@ -33,11 +33,7 @@ class User{
     {
         $this->timestampLeave=$timestampLeave;
     }
-    //empNum
-    function returnEmpNum()
-    {
-        return $this->emp_num;
-    }
+    
     //name
     function returnName()
     {

@@ -127,31 +127,31 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" class="form-control" required>
+						<input type="text" id="name" name="name" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Surname</label>
-						<input type="email" class="form-control" required>
+						<input type="email" id="surname" name="surname" class="form-control" required>
 					</div>
                     <div class="form-group">
 						<label>Email/Username</label>
-						<input type="email" class="form-control" required>
+						<input type="email" id="email" name="email" class="form-control" required>
 					</div>
                     <div class="form-group">
 						<label>Password</label>
-						<input type="text" class="form-control" required>
+						<input type="text" id="password" name="password" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Address</label>
-						<textarea class="form-control" required></textarea>
+						<textarea class="form-control" id="address" name="address" required></textarea>
 					</div>	
                     <div class="form-group">
 						<label>department</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" id="department" name="department" required>
 					</div>	
                     <div class="form-group">
 						<label>Job</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" id="job" name="job" required>
 					</div>			
 				</div>
 				<div class="modal-footer">

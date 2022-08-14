@@ -15,8 +15,8 @@ class User{
     function setDetails( $surname ,$username, $email ,$password, $adress, $department, $job)
     {
        
-        $this->username=$username;
         $this->surname=$surname;
+        $this->username=$username;
         $this->email=$email;
         $this->password=$password;
         $this->adress=$adress;
@@ -25,13 +25,15 @@ class User{
         
         
     }
-    public setTimeArrive($timestampArrive)
+    //set time arrive
+    function setTimeArrive($timestampArrive)
     {
-        $this->timestampArrive=$timestampArrive;
+        return $this->timestampArrive;
     }
-    public setTimeLeave($timestampLeave)
+    //set timeleave
+    function setTimeLeave($timestampLeave)
     {
-        $this->timestampLeave=$timestampLeave;
+       return $this->timestampLeave;
     }
     
     //name

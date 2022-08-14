@@ -52,6 +52,10 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<?php
+     $sql="select * from employees";
+    $result= mysqli_query($con, $sql);
+?>
 <div class="container-xl">
 	<div class="table-responsive">
 		<div class="table-wrapper">
@@ -76,14 +80,17 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>
 						</th>
+						<th> Employee Number </th>
 						<th>Name</th>
 						<th>Email</th>
 						<th>Address</th>
-						<th>Phone</th>
-						<th>Actions</th>
+						<th>Password</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
+				<?php
+				while($row = mysqli_fetch_array($result)) { ?>
 					<tr>
 						<td>
 							<span class="custom-checkbox">
@@ -91,16 +98,18 @@ $(document).ready(function(){
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-						<td>Thomas Hardy</td>
-						<td>thomashardy@mail.com</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-						<td>(171) 555-2222</td>
+						<td><?php echo $row['emp_num']; ?></td>
+						<td><?php echo $row['name']; ?></td>
+						<td><?php echo $row['email']; ?></td>
+						<td><?php echo $row['adress'];?></td>
+						<td><?php echo $row['password'];?></td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
 				</tbody>
+				<?php } ?>
 			</table>
 			
         <div class="table-title">
@@ -131,7 +140,7 @@ $(document).ready(function(){
 					</div>
 					<div class="form-group">
 						<label>Surname</label>
-						<input type="email" id="surname" name="surname" class="form-control" required>
+						<input type="text" id="surname" name="surname" class="form-control" required>
 					</div>
                     <div class="form-group">
 						<label>Email/Username</label>
@@ -139,7 +148,7 @@ $(document).ready(function(){
 					</div>
                     <div class="form-group">
 						<label>Password</label>
-						<input type="text" id="password" name="password" class="form-control" required>
+						<input type="Password" id="password" name="password" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Address</label>

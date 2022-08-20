@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Employee Login </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -17,21 +17,21 @@
 </head>
 <body>
   
-    <form name="f1" action="authentication.php" action="POST">
+    <form name="f2" action="userauth.php" method= "POST" >
         <div class="container p-3 my-3 bg-primary text-white" style="text-align: center; border-radius: 25px;">
             <h1><b></b> Employee management System</b></h1>
             <h2> Login </h2>
             <div class="input-group" style="width: 50%; align-items: center; align-content: center; margin: auto;">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="user" type="text" class="form-control" name="user" id="user" placeholder="Email" required>
+                <input  type="text" class="form-control" name="user" id="user" placeholder="Email" required>
             </div>
             <br>
             <div class="input-group" style="width: 50%; align-items: center; align-content: center; margin: auto;">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="pass" type="password" class="form-control" name="pass" id="pass" placeholder="Password" required>
+                <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" required>
             </div>
             <br>
-            <input type =  "submit" class=".btn btn-dark btn-lg" value="login">  
+            <input type ="submit" class=".btn btn-dark btn-lg" value="login">  
             <br>
             <br>
             <a href="admin.php" class=".btn btn-dark btn-lg" role="button">Admin</a>

@@ -1,0 +1,94 @@
+<?php
+session_start();
+require_once "connection.php";
+require_once "classes.php";
+
+if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+	header ("Location: admin.php");
+}
+
+?>
+
+
+<head>
+	<title>php username </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	 
+  </head>
+
+<body>
+<?php
+     $sql="select * from employees";
+    $result= mysqli_query($con, $sql);
+
+   
+    $user = new User();
+    $user->setEmail("Tshepo");
+    echo $user->returnemail();
+?>
+
+<section class="vh-100" style="background-color: rgb(255, 255, 255);">
+	<div class="container py-5 h-100">
+	  <div class="row d-flex justify-content-center align-items-center h-100">
+		<div class="col-md-12 col-xl-4">
+  
+		  <div class="card" style="border-radius: 15px;">
+			<div class="card-body text-center">
+			  <div class="mt-3 mb-4">
+				<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+				  class="rounded-circle img-fluid" style="width: 100px;" />
+			  </div>
+			  <h4 class="mb-2">Julie L. Arsenault</h4>
+			  <p class="text-muted mb-4">@Programmer <span class="mx-2">|</span> <a
+				  href="#!">mdbootstrap.com</a></p>
+			  <div class="mb-4 pb-2">
+				<button type="button" class="btn btn-outline-primary btn-floating">
+				  <i class="fab fa-facebook-f fa-lg"></i>
+				</button>
+				<button type="button" class="btn btn-outline-primary btn-floating">
+				  <i class="fab fa-twitter fa-lg"></i>
+				</button>
+				<button type="button" class="btn btn-outline-primary btn-floating">
+				  <i class="fab fa-skype fa-lg"></i>
+				</button>
+			  </div>
+			  <button type="button" class="btn btn-primary btn-rounded btn-lg">
+				Message now
+			  </button>
+			  <div class="d-flex justify-content-between text-center mt-5 mb-2">
+				<div>
+				  <p class="mb-2 h5">8471</p>
+				  <p class="text-muted mb-0">Wallets Balance</p>
+				</div>
+				<div class="px-3">
+				  <p class="mb-2 h5">8512</p>
+				  <p class="text-muted mb-0">Income amounts</p>
+				</div>
+				<div>
+				  <p class="mb-2 h5">4751</p>
+				  <p class="text-muted mb-0">Total Transactions</p>
+				</div>
+			  </div>
+			  <br>
+			  <br>
+              <form action="logout.php">
+                <input type="submit" class="btn btn-primary btn-rounded btn-lg" value="Logout">
+              </form>
+			</div>
+		  </div>
+  
+		</div>
+	  </div>
+	</div>
+  </section>
+</body>

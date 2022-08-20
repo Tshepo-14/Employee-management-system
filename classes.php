@@ -10,7 +10,11 @@ class User{
     public $job;
     public $timestampArrive;
     public $timestampLeave;
-  
+    
+    function setEmail($email)
+    {
+        $this->email=$email;
+    }
     
     function setDetails( $surname ,$username, $email ,$password, $adress, $department, $job)
     {
